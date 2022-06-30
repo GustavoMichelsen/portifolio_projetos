@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>House Rocket - An Imaginary Company</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Gustavo Michelsen</strong>
+						<br />Portifólio de Ciência de Dados
+					</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>House Rocket - An Imaginary Company</h2>
+						</header>
+						<p>
+							<span class="tab"></span>O objetivo deste projeto é gerar insights para compra de casas por uma empresa do ramo imobiliário.
+							<br /><span class="tab"></span>Através da análise exploratória dos dados foi possível perceber quais os dados mais relevantes, filtrá-los e entregar uma ferramenta que realmente poderá ser utilizada pela empresa para aumentar seus lucros.
+							<br /><span class="tab"></span>Clicando na imagem abaixo, você será redimensionado para o Dashboard.
+						</p>
+						<a href="https://house-rocket-gustavo-michelsen.herokuapp.com/" target="_blank" class="image fit thumb"><img src="images/fulls/01.jpg" alt="" /></a>
+
+						<h1>Detalhes do Projeto</h1>
+
+						<h2>Questão de Negócio</h2>
+						<h4>O que se quer resolver?</h4>
+						<p>
+							<span class="tab">Trazer as melhores oportunidades de negócio.<br>
+						</p>
+						<ul>
+							<li>Uma lista com as melhores casas para compra → venda;</li>
+							<li>Segunda lista com as melhores casas para compra → reforma → venda.</li>
+						</ul>
+						<h4>Qual a problema, a dor, a necessidade do time de negócio ?</h4>
+						<p>
+							<span class="tab">Encontrar as oportunidades mais lucrativas.
+						</p>
+
+
+						<h2>Premissas de Negócio</h2>
+						<p>
+							<h4>O que foi assumindo para realizar o projeto?</h4>
+							<ul>
+								<li>O valor de sqft_basement já está incluído no sqft_living;</li>
+								<li>A empresa vende 100 casas ao ano;</li>
+								<li>O lucro bruto da empresa atualmente é de 27% ao ano.</li>
+							</ul>
+
+							<h2>Planejamento da Solução</h2>
+							<h4>Qual o plano utilizado para resolver o problema?</h4>
+							<ul>
+								<li>Coleta dos dados do https://www.kaggle.com/;</li>
+								<li>Retirados os outliers;</li>
+								<li>Teste de hipóteses;</li>
+								<li>Separadas as casas que são para reforma das que são para compra e venda;</li>
+								<li>Construidas as tabelas;</li>
+								<li>Construidos os mapas.</li>
+							</ul>
+							<h4>Dividir as casas em 2 segmentos (compra e venda, renovação e venda)</h4>
+							<ul>
+								<li>Compra e venda. Buscar casas em boas condições, categorizadas por m², preferencialmente com porão pelo menor valor possível;</li>
+								<li>Reforma e venda. Encontrar casas em condições ruins, categorizadas por m², preferencialmente com porão, por pelo menos 35% do valor que ela será revendida.</li>
+							</ul>
+
+							<h2>Os 5 principais Insights de dados</h2>
+							<h4>Há diferença entre os valores das casas dependendo da estação do ano(sazonalidade).</h4>
+							<p>Resposta: Não. Quando analisada a variação de preços entre as estações, não há mudanças significativas de valores entre as casas similares.</p>
+							<h4>Casas com porão tem o valor por m² mais caro.</h4>
+							<p>Resposta: Sim. Casas com porão tem um valor 12,5% mais alto em comparação com casas sem porão.</p>
+							<h4>Casas reformadas valem mais que casas mais novas.</h4>
+							<p>Resposta: Sim. Casas que passaram por reforma tem um valor 28,6% maior do que as não reformadas.</p>
+							<h4>Há diferença entre o preço do m² da casa.</h4>
+							<p>Resposta: Sim. Existe uma correlação entre o preço e os tamanhos, havendo casas mais baratas, em mesmas condições e tamanho que outras.</p>
+							<h4>Casa compradas baratas e reformadas dão mais lucro que apenas compra e venda.</h4>
+							<p>Resposta: Sim. Existem casas que podem ser compradas a um valor baixo, reformadas e ainda darem um lucro maior que a compra e venda.</p>
+
+							<h2>Resultados financeiros para o negócio</h2>
+							<p>A empresa pode ter um lucro bruto médio de 60% sobre as aplicações.</p>
+
+							<h2>Conclusão</h2>
+							<p>Através da análise dos dados consegui alcançar um resultado positivo, trazendo como solução um dashboard interativo que auxiliará os gestores da empresa a tomarem decisões mais assertivas.</p>
+
+							<h2>Lições aprendidas</h2>
+							<p>Como meu primeiro projeto de ciência de dados, ele foi desafiador por exigir tanto a aplicação do conhecimento aprendido durante o curso, quanto a aquisição de novos conhecimentos que melhoraram a qualidade da solução.</p>
+							<p>Pude ainda perceber na prática a complexidade de trazer para o usuário final uma solução assertiva que faça sentido para o negócio e que agregue ao conhecimento já existente na empresa.</p>
+
+							<h2>Próximos passos</h2>
+							<p>Para melhorar ainda mais o projeto, trazendo novas versões, percebo que seria necessário melhorar os filtros quanto a quantidade de quartos na casa, banheiros, qualidade da casa e separação por zipcode (vizinhança).</p>
+							<p>Em um segundo momento poderia fazer novos filtros que entregassem essa solução. E em uma terceira versão do projeto, aplicar um algoritmo de machine learning que faça a separação das casas conforme características parecidas.</p>
+							<p>A aplicação dessas melhorias melhoria a assertividade das escolhas e maximalizaria o lucro da empresa.</p>
+
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+						<h2>Contatos</h2>
+						<p>Fique a vontade para entrar em contato comigo através dos contatos abaixo.</p>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										gtv.michelsen@gmail.com
+									</li>
+									<li>
+										<h3 class="icon brands fa-linkedin"><span class="label">Linkedin</span></h3>
+										<a href="https://www.linkedin.com/in/gustavo-michelsen-30946a223/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<!-- <li><a href="https://www.instagram.com/gustavomichelsen/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+						<li><a href="https://github.com/GustavoMichelsen" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/gustavo-michelsen-30946a223/" class="icon brands fa-linkedin" target="_blank" rel="noopener noreferrer"><span class="label">Linkedin</span></a></li>
+						<li><a href="#three" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
