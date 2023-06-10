@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<script>
+	    function copyText() {
+	      var text = "https://cross-sell-classification.onrender.com/cross_sell/predict"; // Texto a ser copiado
+	      navigator.clipboard.writeText(text)
+	        .then(function() {
+	          console.log("Texto copiado: " + text);
+	          alert("Texto copiado!");
+	        })
+	        .catch(function(error) {
+	          console.error("Erro ao copiar o texto: ", error);
+	          alert("Erro ao copiar o texto. Verifique o console para mais detalhes.");
+	        });
+	    }
+	  </script>
+		<title>Health Insurance Cross Sell - Classificação de Clientes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Gustavo Michelsen</strong>
+						<br />Portifólio de Ciência de Dados
+					</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Health Insurance Cross Sell - Classificação de Clientes</h2>
+						</header>
+						<p>
+							<span class="tab"></span>O objetivo deste projeto foi prever a probabilidade de um cliente adquirir um novo produto. Essa informação permite identificar quais clientes têm interesse no novo produto e quais não têm. Com esses dados em mãos, os gestores da empresa podem direcionar seus esforços de vendas de forma mais eficiente.
+							<br /><span class="tab"></span>A entrega desse projeto é realizada por meio de uma API. No vídeo abaixo, apresento os resultados para o negócio e demonstro como desenvolvi essa solução.
+						</p>
+
+						<!-- Vídeo do YT -->
+
+						<div class="video-container">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/mHOuzAENaBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+
+						<!-- Final do Vídeo -->
+						<p></p>
+						<p>
+							<span class="tab"></span>Para demonstrar a resposta da API, criei uma planilha disponível no link abaixo. No entanto, é importante ressaltar que as informações geradas pela API podem ser integradas a qualquer sistema existente na empresa.
+						</p>
+
+						<!-- Icone Google Sheets -->
+
+						<ul class="labeled-icons">
+							<li>
+								<h3 class="icon brands fa-google"><span class="label">Google Sheets</span></h3>
+								<a href="https://docs.google.com/spreadsheets/d/1l1-B-_nI68OW3eXZL-8ofAkRY_5pEP_RPTru8iQrkVI/edit#gid=0" target="_blank" rel="noopener noreferrer">Planilha do Google Sheets</a>
+							</li>
+						</ul>
+
+						<!-- Final do Icone -->
+
+						<p>
+							<span class="tab"></span>Caso queira fazer uma consulta diretamente na API, você pode utilizar o endereço abaixo passando os seguintes parâmetros:
+							<br><span class="tab"></span>Base URL: <span style="cursor: pointer; text-decoration: underline;" onclick="copyText()">https://cross-sell-classification.onrender.com/cross_sell/predict</span> - Clique no link para copiar.
+						</p>
+						<h4>Parametros Passados</h4>
+						<ul>
+							<li>{"id": “qualquer valor”, </li>
+							<li>"Gender": “Male”, “Female”, </li>
+							<li>"Age": “18 - ... – 85”, </li>
+							<li>"Driving_License": “0, 1”, 0 = Não tem CNH, 1 = Tem CNH</li>
+							<li>"Region_Code": “0 - ... – 52”, </li>
+							<li>"Previously_Insured": “0, 1”, 0 = Não sofreu acidente, 1 = Sofreu acidente</li>
+							<li>"Vehicle_Age": “> 2 Years”, “1-2 Year”, “< 1 Year”, </li>
+							<li>"Vehicle_Damage": “Yes”, “No”, </li>
+							<li>"Annual_Premium": “2630 - ... – 540 000”, </li>
+							<li>"Policy_Sales_Channel": “10 - ... – 152”, </li>
+							<li>"Vintage": “10 - ... – 299”}</li>
+						</ul>
+						<h4>Parametros Recebidos</h4>
+						<ul>
+							<li>{"id": , </li>
+							<li>"Gender": , </li>
+							<li>"Age": , </li>
+							<li>"Driving_License": ,</li>
+							<li>"Region_Code": , </li>
+							<li>"Previously_Insured": ,</li>
+							<li>"Vehicle_Age": , </li>
+							<li>"Vehicle_Damage": , </li>
+							<li>"Annual_Premium": , </li>
+							<li>"Policy_Sales_Channel": , </li>
+							<li>"Vintage": ,</li>
+							<li>"Classification": }</li>
+						</ul>
+
+						<p>
+							<span class="tab"></span>A seguir você poderá entender mais a respeito de desenvolvimento desse projeto.
+						</p>
+
+						<h1>Detalhes do Projeto</h1>
+
+						<h2> Premissas de Negócio – O que se procurou resolver? </h2>
+						<p>
+							<span class="tab"></span>O problema fictício se baseia em uma empresa de seguros de saúde que está expandindo seu portfólio de produtos, incluindo o seguro automotivo como um dos seus serviços. Para entender o interesse do público, a equipe de marketing realizou uma pesquisa de interesse com aproximadamente 380 mil clientes.
+							<br><span class="tab"></span>No entanto, a empresa não possui recursos suficientes para entrar em contato com todos os clientes em sua base. Portanto, o diretor de marketing e vendas solicitou uma solução que permita otimizar o direcionamento desses recursos de forma mais eficiente.
+						</p>
+
+							<h2>Planejamento da Solução</h2>
+							<h4>Qual o plano utilizado para resolver o problema?</h4>
+							<ul>
+								<li>Coleta dos dados - Fiz no https://www.kaggle.com/;</li>
+								<li>Limpeza dos dados – Verifiquei se havia algum dado a ser ajustado;</li>
+								<li>Criação de novas Features – Criei novas features baseadas nas originais;</li>
+								<li>Seleção de colunas – Excluí colunas que eu não iria mais precisar ou de dados que eu não utilizaria;</li>
+								<li>Exploração dos dados – Explorei os dados buscando entender o fenômeno e gerar Insigths;</li>
+								<li>Preparação dos dados – Preparei os dados para o treinamento dos algoritmos de Machine Learning;</li>
+								<li>Seleção das Features mais relevantes – Para isso utilizei o algoritmo Boruta;</li>
+								<li>Treinamento dos algoritmos de Machine Learning – Treinei 3 tipos de algoritmos de Machine Learning para poder comprar o desempenho de cada um deles, escolhendo por fim o melhor;</li>
+								<li>Ajuste dos hiperparâmetros do modelo – Testei o modelo escolhido com diferentes hiperparâmetros e comparei os resultados;</li>
+								<li>Treinamento do modelo de Machine Learning – Treinei o modelo com os hiperparâmetros que apresentaram o melhor desempenho;</li>
+								<li>Análise dos resultados – Levantei os resultados financeiros do projeto para empresa e comparei os resultados obtidos com os dados originais para descobrir a confiabilidade do modelo;</li>
+								<li>Criação da API – Criei e testei a API.</li>
+							</ul>
+
+							<h2>Principais Insights de dados</h2>
+							<ul>
+								<li>Pessoas com idade entre 40 e 49 anos tem maior probabilidade de adquirir um seguro automotivo;</li>
+								<li>Pessoas com carro entre 1 e 2 anos de uso tem maior probabilidade de adquirir um seguro.</li>
+							</ul>
+
+							<h2>Resultados financeiros para o negócio</h2>
+							<p>
+								<span class="tab"></span>Com a implementação desse modelo em produção, a empresa poderá obter uma economia significativa no contato com seus clientes, pois o contato será direcionado, priorizando aqueles que têm maior interesse em adquirir um seguro automotivo.
+								<br><span class="tab"></span>O gráfico abaixo ilustra esse cenário, demonstrando que com aproximadamente 20% do conjunto de dados, é possível acertar cerca de 57% dos clientes interessados. Já com 40% do conjunto de dados, é possível identificar aproximadamente 90% dos clientes interessados.
+							</p>
+							<a class="img center"><img src="images/fulls/04-2.jpg" alt="" /></a>
+							<p>
+								<br><span class="tab"></span>Esses resultados destacam a eficácia do modelo na segmentação dos clientes e na otimização dos recursos de contato, permitindo à empresa focar em abordar diretamente os clientes com maior probabilidade de adquirir o seguro automotivo. Isso proporcionará uma abordagem mais eficiente e aumentará as chances de sucesso nas vendas.
+							</p>
+
+							<h2>Lições aprendidas</h2>
+							<p>
+								<span class="tab"></span>Uma das principais lições que aprendi com esse projeto foi a importância de utilizar as métricas corretas para avaliar modelos de aprendizado de máquina. No caso deste projeto, minha prioridade foi alcançar a maior precisão possível.
+								<br><span class="tab"></span>Outra lição importante foi a necessidade de comunicar os resultados de forma eficaz, mostrando para a equipe de negócios o valor que pode ser alcançado com base nas decisões que eles tomarem.
+								<br><span class="tab"></span>Ao enfatizar a importância da precisão do modelo, posso garantir que as previsões sejam mais confiáveis e úteis para a empresa. Além disso, ao comunicar os resultados de maneira clara e compreensível, posso fornecer informações valiosas para a equipe de negócios, permitindo que eles tomem decisões informadas com base nos insights fornecidos pelo modelo.
+								<br><span class="tab"></span>Essas lições me ajudaram a entender a importância de selecionar as métricas adequadas para cada projeto e de estabelecer uma comunicação eficiente para que os resultados sejam compreendidos e aplicados corretamente no contexto empresarial.
+							</p>
+
+							<h2>Próximos passos</h2>
+							<p>
+								<span class="tab"></span>Entre os próximos passos, está o aprofundamento do seu conhecimento sobre o negócio de seguros automotivos. Isso permitirá uma compreensão mais aprofundada dos aspectos específicos desse setor e ajudará a aprimorar ainda mais o modelo de produção.
+								<br><span class="tab"></span>Uma possibilidade interessante é buscar novas características relevantes para o conjunto de dados, o que pode enriquecer o modelo e melhorar sua capacidade de previsão. A incorporação de variáveis adicionais, como informações demográficas dos clientes, histórico de sinistros, dados econômicos e outros fatores relevantes para o setor de seguros automotivos, pode ser uma abordagem promissora.
+								<br><span class="tab"></span>Além disso, existem outros projetos relacionados que podem ser desenvolvidos para agregar valor à empresa. Por exemplo, a avaliação de risco do cliente é uma área importante, pois permite identificar os perfis de risco dos clientes e tomar medidas preventivas ou personalizar as ofertas de seguros com base nesses dados. A análise da elasticidade do preço é outra área interessante, pois ajuda a compreender como a demanda por seguros automotivos é afetada por variações nos preços e pode auxiliar na definição de estratégias de precificação mais eficientes.
+							</p>
+
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+						<h2>Contatos</h2>
+						<p>Fique a vontade para entrar em contato comigo através dos contatos abaixo.</p>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										gtv.michelsen@gmail.com
+									</li>
+									<li>
+										<h3 class="icon brands fa-linkedin"><span class="label">Linkedin</span></h3>
+										<a href="https://www.linkedin.com/in/gustavo-michelsen-30946a223/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<!-- <li><a href="https://www.instagram.com/gustavomichelsen/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+						<li><a href="https://github.com/GustavoMichelsen" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/gustavo-michelsen-30946a223/" class="icon brands fa-linkedin" target="_blank" rel="noopener noreferrer"><span class="label">Linkedin</span></a></li>
+						<li><a href="#three" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
