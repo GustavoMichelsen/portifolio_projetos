@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>All in One Place - Projeto de clusterização</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Gustavo Michelsen</strong>
+						<br />Portifólio de Ciência de Dados
+					</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>All in One Place - Clusterização de Clientes</h2>
+						</header>
+						<p>
+							<span class="tab"></span>O objetivo deste projeto é fazer a clusterização dos melhores clientes da empresa All in One Place, para formar um programa de fidelidade chamado Insiders.
+							<br /><span class="tab"></span>Em posse dessa lista, o time de Marketing fará uma sequência de ações personalizadas e exclusivas ao grupo, de modo a aumentar o faturamento e a frequência de compra.
+							<br /><span class="tab"></span>Como resultado para esse projeto, é esperado que seja entregue uma lista de pessoas elegíveis a participar do programa Insiders e um relatório respondendo as seguintes perguntas:
+						</p>
+						<ol>
+							<li>Quem são as pessoas elegíveis para participar do programa de Insiders?</li>
+							<li>Quantos clinetes farão parte do grupo?</li>
+							<li>Quais as principais características desses clientes?</li>
+							<li>Qual a porcentagem de contribuição do faturamento, vinda do Insiders?</li>
+							<li>Qual a expectativa de faturamento desse grupo para os próximos meses?</li>
+							<li>Quais as condições para uma pessoa ser elegível ao Insiders?</li>
+							<li>Quais as condições para uma pessoa ser removida do Insiders?</li>
+							<li>Qual a garantia que o programa Insiders é melhor que o restante da base?</li>
+							<li>Quais ações o time de marketing pode realizar para aumentar o faturamento?</li>
+						</ol>
+						<p>
+							<span class="tab"></span>Durante o planejamento da solução, durante a fase benchmark, eu me deparei com uma forma de clusterizar os clientes chamado modelo RFM (Recency, Frequency, Monetary, em inglês). Esse modelo permite fazer uma rápida entrega de valor a empresa, dando início ao programa de fidelidade. Com isso meu planejamento ficou da seguinte forma:
+						</p>
+						<ul>
+							<li>Começar aplicando RFM para gerar valor e trazer as principais características dos clientes;</li>
+							<li>Relatório de Insights;</li>
+							<li>Treinar algoritmos de ML(usar RFM para entrada);</li>
+							<li>Entrega da clusterização e relatório Final.</li>
+						</ul>
+						<p>
+							<span class="tab"></span>Como eu farei duas entregas, nesta página você encontrará os resultados das duas, começando pelo modelo RFM.
+						</p>
+
+						<h1>Entrega do Modelo RFM</h1>
+
+						<p>
+							<span class="tab"></span>Para facilitar o entendimento, no vídeo abaixo eu apresento o modelo RFM e os resultados obtidos a partir dele.
+						</p>
+
+						<!-- Vídeo do YT -->
+
+						<div class="video-container">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/53IURklaepA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+
+						<!-- Final do Vídeo -->
+						<p></p>
+						<p>
+							<span class="tab"></span>Abaixo detalho o modelo e sua aplicação.
+						</p>
+						<h2>O que é o Modelo RFM?</h2>
+						<p>
+							<span class="tab"></span>RFM é uma ferramenta de marketing utilizada para clusterizar os clientes tendo como base três características:
+						</p>
+						<ul>
+							<li>Recency (Recência) – A recência nos aponta quando foi a última vez que o cliente fez uma compra;</li>
+							<li>Frequency (Frequência) – A frequência é a soma de todas as compras feitas pelo cliente dentro de um determinado período;</li>
+							<li>Monetary (Monetário) – Monetário é o total gasto pelo cliente dentro do período.</li>
+						</ul>
+						<p>
+							<span class="tab"></span>Com base nessas três características nós atribuímos notas que vão geralmente de 1 a 5, sendo 5 a nota mais alta. Para atribuir essas notas, devemos ordenar a característica de forma que os maiores valores fiquem no topo e os menores valores fiquem na base, após isso é atribuída a nota conforme a ordenação. Para os 20% que ficarão no topo da lista é atribuído a nota 5, e assim por diante até os últimos 20% que receberão a nota 1.
+							<br><span class="tab"></span>Com base na combinação destas notas nós podemos atribuir um rótulo ao cliente. O gráfico abaixo mostra os rótulos aplicados.
+						</p>
+						<a class="img center"><img src="images/fulls/05-2.png" alt="" /></a>
+						<br>
+						<h2>Resultados para o negócio a partir do modelo RFM</h2>
+						<p>
+							<span class="tab"></span>Com a classificação é possível que o time de marketing de inicio as ações para manter o grupo ‘champions’, que são os melhores clientes, assim como é possível fazer campanhas personalizadas buscando melhorar a performance de cada grupo para que eles se tornem ‘champions’.
+							<br><span class="tab"></span>Demais resultados, como o financeiro, tamanho dos grupos, etc. eu apresento no vídeo acima.
+						</p>
+						<h1>Solução Final</h1>
+						<h2>Em construção</h2>
+
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+						<h2>Contatos</h2>
+						<p>Fique a vontade para entrar em contato comigo através dos contatos abaixo.</p>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										gtv.michelsen@gmail.com
+									</li>
+									<li>
+										<h3 class="icon brands fa-linkedin"><span class="label">Linkedin</span></h3>
+										<a href="https://www.linkedin.com/in/gustavo-michelsen-30946a223/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<!-- <li><a href="https://www.instagram.com/gustavomichelsen/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+						<li><a href="https://github.com/GustavoMichelsen" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/gustavo-michelsen-30946a223/" class="icon brands fa-linkedin" target="_blank" rel="noopener noreferrer"><span class="label">Linkedin</span></a></li>
+						<li><a href="#three" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
