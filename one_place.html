@@ -94,8 +94,52 @@
 							<br><span class="tab"></span>Demais resultados, como o financeiro, tamanho dos grupos, etc. eu apresento no vídeo acima.
 						</p>
 						<h1>Solução Final</h1>
-						<h2>Em construção</h2>
-
+						<h2>Detalhes da Solução Final</h2>
+						<p>
+							<span class="tab"></span>O modelo final foi construído com base no embedding das características disponíveis. O embedding é uma técnica que reduz a quantidade de dados fazendo com que 10 colunas de informação virem 2, por exemplo. Ao empregar essa técnica, fazemos um trade-off, sacrificando a explicabilidade do porquê um cliente pertence a um determinado grupo em prol de criar grupos de forma mais simplificada. Neste projeto, essa abordagem foi necessária, uma vez que os grupos não se formaram naturalmente.
+							<br><span class="tab"></span>Após o embedding , testei diferentes modelos de clusterização e o modelo de clusterização hierárquica (hierarchical clustering) demonstrou o melhor desempenho. Como resultado, este modelo produziu oito grupos de Insiders.
+							<br><span class="tab"></span>Neste projeto, todos os elementos foram migrados para a nuvem, resultando no seguinte esquema para a fase de produção do projeto:
+						</p>
+						<a class="img center"><img src="images/fulls/05-5.png" alt="" /></a>
+						<h2>Detalhes dos Grupos de Insiders</h2>
+						<p>
+							<span class="tab"></span>Apesar de não conseguirmos definir exatamente as métricas para entrada em cada grupo de Insiders, é possível definir as características gerais desses grupos.
+							<br><span class="tab"></span>Com base na clusterização e nas características gerais dos grupos, eu os nomeei conforme abaixo:
+						</p>
+						<ul>
+							<li><b>Insiders:</b> Este é o grupo dos campeões. Eles compram frequentemente e em grandes quantidades do mesmo item.</li>
+							<li><b>More Frequency:</b> São clientes que compram em grande quantidade, mas com baixa frequência de compras.</li>
+							<li><b>Captivate Customer:</b> Clientes que compram em grande quantidade, mas compraram apenas uma vez e recentemente.</li>
+							<li><b>More Itens:</b> São clientes que compram com alguma frequência, em grande quantidade, mas não compram muitos tipos de itens.</li>
+							<li><b>Single Purchase:</b> Clientes que compraram pela primeira vez, adquiriram várias unidades e compraram diversos tipos de itens.</li>
+							<li><b>To Encourage:</b> Este grupo é composto por clientes que compraram pela primeira vez, adquiriram poucas unidades de poucos itens diferentes.</li>
+							<li><b>So Far Away:</b> Trata-se do grupo de clientes que compraram pela primeira vez, adquiriram poucas unidades de poucos itens e não compram há muito tempo.</li>
+							<li><b>Lost Clients:</b> Clientes que compraram apenas uma vez e devolveram os itens que compraram.</li>
+						</ul>
+						<h2>Resultados Financeiros</h2>
+						<p>
+							<span class="tab"></span>Como podemos ver nos gráficos abaixo, o grupo Insiders representa 16,1% do total de clientes, mas é responsável por 63,9% do faturamento total.
+						</p>
+							<a class="img center"><img src="images/fulls/05-3.png" alt="" /></a>
+							<a class="img center"><img src="images/fulls/05-4.png" alt="" /></a>
+						<p>
+							<span class="tab"></span>Para visualizar outras informações sobre o grupo Insiders ou sobre os outros grupos, eu criei um dashboard interativo que pode ser acessado clicando na imagem abaixo.
+						</p>
+						<a href="https://one-place.streamlit.app/" target="_blank" class="image fit thumb"><img src="images/fulls/05-6.png" alt="" /></a>
+						<p>
+							<span class="tab"></span><a href="docs/relatorio_final.pdf">Aqui</a> você pode baixar o relatório final com as perguntas do negócio.
+						</p>
+						<h2>Lições Aprendidas</h2>
+						<p>
+							<span class="tab"></span>Durante o projeto eu aprofundei meu conhecimento sobre a etapa de criação de features, derivando informações das características iniciais. Também adquiri um entendimento mais profundo sobre modelos de clusterização e sobre a técnica de embedding, que eu não conhecia anteriormente.
+							<br><span class="tab"></span>Outro aspecto significativo foi a necessidade de fornecer resultados de maneira ágil para a equipe de negócios. Neste projeto, consegui atender a essa necessidade iniciando com uma abordagem mais simples de classificação de clientes e entregando uma solução em menos de duas semanas.
+							<br><span class="tab"></span>Aprendi ainda mais sobre a importância da comunicação de resultados e da entrega de ferramentas a equipe para avaliar a eficácia de futuras campanhas direcionadas aos grupos.
+						</p>
+						<h2>Próximos Passos</h2>
+						<p>
+							<span class="tab"></span>Entre os próximos passos, posso aprimorar o modelo, o que exigiria a coleta de novas características de comportamento dos clientes para aumentar a eficiência da classificação.
+							<br><span class="tab"></span>Além disso, outros modelos podem ser desenvolvidos, como a previsão de faturamento dos grupos e um sistema de recomendação, entre outros.
+						</p>
 					</section>
 
 				<!-- Three -->

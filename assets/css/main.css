@@ -116,8 +116,8 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #787878;
-		font-weight: 400;
+		color: #17202A;
+		font-weight: bolder;
 	}
 
 	em, i {
@@ -3235,3 +3235,4 @@ input, select, textarea {
 	.tab{
 		margin-left: 40px;
 	}
+	/* Código personalizado */
